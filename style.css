@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fefae0;
+    color: #283618;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.icons img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.pet-gallery {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pet img {
+    width: 150px;
+    border-radius: 10px;
+}
