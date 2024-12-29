@@ -3,84 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qianyang Chen - PhD Student</title>
+    <title>Qianyang Chen</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fefae0;
+            color: #283618;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #bc6c25;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .top-nav .name {
+            font-size: 1.8rem;
+            color: #283618;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #606c38;
+            font-weight: bold;
+        }
+        .content-layout {
+            display: flex;
+            align-items: flex-start;
+        }
+        .left-column {
+            width: 30%;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .right-column {
+            width: 70%;
+            padding-left: 40px;
+        }
+      .right-column section {
+            margin-bottom: 40px;  /* Increase spacing between sections */
+        }
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #bc6c25;
+        }
+        h2 {
+            color: #606c38;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #bc6c25;
+            color: #606c38;
+        }
+        .pet-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .pet-gallery .pet img {
+            width: 120px;  /* Smaller size */
+            height: 120px;  /* Keep the same height */
+            border-radius: 50%;  /* Make images round */
+            object-fit: cover;
+        }
+      .contact-info img {
+    background-color: transparent;
+}
+      ul {
+        list-style-type: disc;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+      ul li {
+        margin-bottom: 15px;  /* Adjust spacing between list items */
+    }
+
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="header-content">
-                <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-                <div class="text">
-                    <h1>Qianyang Chen</h1>
-                    <p>PhD Student | University of Sydney</p>
-                    <p>Researching Collective Intelligence and Self-Organising Systems</p>
-                    <div class="icons">
-                        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-                        <a href="mailto:qianyang.chen@sydney.edu.au"><img src="email-icon.png" alt="Email"></a>
-                        <a href="#"><img src="location-icon.png" alt="Location"></a>
-                    </div>
-                </div>
-                
-            </div>
-        </header>
-        
-        <section class="about">
-            <h2>About</h2>
-            <p>I am a PhD student in Computer Science at the University of Sydney, specialising in collective intelligence in complex systems...</p>
-        </section>
-        
-        <section class="research">
-            <h2>Research</h2>
-            <p>My primary focus lies in collective intelligence, guided self-organisation, and thermodynamic efficiency in complex systems. I work on applying statistical mechanics to model emergent behaviour.</p>
-        </section>
-        
-        <section class="cv">
-            <h2>CV</h2>
-            <p><a href="cv.pdf" target="_blank">Download CV</a></p>
-        </section>
+        <nav class="top-nav">
+            <h1 class="name">Qianyang Chen</h1>
+            <!-- <ul class="nav-links">
+                <li><a href="cv.html">CV</a></li>
+            </ul> -->
+        </nav>
+        <div class="content-layout">
+            <aside class="left-column">
+                <img src="https://qianyangchen.github.io/profile.jpg" alt="Profile Picture" class="profile-pic">
+                <p>PhD student | University of Sydney</p>
+                <ul class="contact-info">
+                    <li><img src="https://qianyangchen.github.io/icon-location.png" alt="Location Icon" width="20"> Sydney, Australia</li>
+                    <li><img src="https://qianyangchen.github.io/icon-email.png" alt="Email Icon" width="20"><a href="mailto:qianyang.chen@sydney.edu.au">Email</a>
+</li>
 
-        <section class="interests">
-            <h2>Interests</h2>
-            <p>Outside research, I enjoy playing table tennis, strumming the ukulele, and collecting stamps from around the world.</p>
-        </section>
-        
-        <section class="pets">
-            <h2>Meet My Friends</h2>
-            <div class="pet-gallery">
-                <div class="pet">
-                    <img src="boltz.jpg" alt="Budgie">
-                    <p>Budgie - Boltz</p>
-                </div>
-                <div class="pet">
-                    <img src="elsa.jpg" alt="Budgie">
-                    <p>Budgie - Elsa</p>
-                </div>
-                <div class="pet">
-                    <img src="gyoza.jpg" alt="Budgie">
-                    <p>Budgie - Gyoza</p>
-                </div>
-                <div class="pet">
-                    <img src="udon.jpg" alt="Budgie">
-                    <p>Budgie - Udon</p>
-                </div>
-                <div class="pet">
-                    <img src="oolong.jpg" alt="Budgie">
-                    <p>Budgie - Oolong</p>
-                </div>
-                <div class="pet">
-                    <img src="sai.jpg" alt="Budgie">
-                    <p>Budgie - Sai</p>
-                </div>
-                <div class="pet">
-                    <img src="dodo.jpg" alt="Cockatiel">
-                    <p>Cockatiel - Dodo</p>
-                </div>
-            </div>
-        </section>
-        
+                    <li><img src="https://qianyangchen.github.io/icon-linkedin.png" alt="Linkedin Icon" width="20"><a href="https://www.linkedin.com/in/qianyang-chen" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+    <img src="https://qianyangchen.github.io/icon-scholar.png" alt="Scholar Icon" width="20"><a href="https://scholar.google.com/citations?user=HZC4CdkAAAAJ&hl=en" target="_blank">Google Scholar</a>
+    </li>
+
+                    <li>
+    <img src="https://qianyangchen.github.io/icon-cv.png" alt="CV Icon" width="20"><a href="https://qianyangchen.github.io/QianyangChen_CV_academic.pdf" target="_blank">CV</a>
+</li>
+
+                </ul>
+            </aside>
+            <section class="right-column">
+                <h2>About me</h2>
+                <p>I am a PhD student at the Centre for Complex Systems, University of Sydney. I study <strong>collective intelligence</strong> and emerging behaviour at <strong>criticality</strong>. My work explores how and why collective systems self-organise to the critical regimes, and looks at strategies to harness self-organisation for purposeful results. I am broadly interested in statistics, statistical physics, information theory and control theory.</p>
+                  
+                <p>I hold a Master of Engineering (Mechatronics) from the University of Melbourne and a Bachelor of Actuarial Studies from Macquarie University. Before academia, I worked as an actuarial analyst in the reinsurance industry, focusing on risk evaluations of extreme natural hazards such as earthquakes and cyclones.</p>
+                
+                
+                <section class="publications">
+                    <h2>Publications</h2>
+                    <ul>
+                      <li>
+                            <strong>Why collective behaviours self-organise to criticality: A primer on information-theoretic and thermodynamic utility measures</strong><br>
+                            <u>Q. Chen</u>, M. Prokopenko<br>
+                            <a href="https://arxiv.org/abs/2409.15668v2">arXiv:2409.15668v2 (2024)</a>
+                        </li>
+                      <li>
+                            <strong>The size inherited age effect on radiocarbon dates of alluvial deposits: redating charcoal fragments in a sand-bed stream, Macdonald River, NSW, Australia</strong><br>
+                            R. Wood, F. King, R. Esmay, <u>Q. Chen</u>, L. Schneider, E. Dotte-Sarout, S. Fallon, K. Fryirs, R. Gillespie, R. Blong<br>
+                        <em>Radiocarbon</em>. Cambridge University Press. (2023)<br>
+                            <a href="https://doi.org/10.1017/RDC.2023.75">DOI:10.1017/RDC.2023.75</a>
+                        </li>
+                      <li>
+                            <strong>Inherited age of floating charcoal fragments in a sand-bed stream, Macdonald River, NSW, Australia: Implications for radiocarbon dating of sediments</strong><br>
+                            R. Blong, K. Fryirs, R. Wood, F. King, L. Schneider, E. Dotte-Sarout, S. Fallon, R. Gillespie, <u>Q. Chen</u>, R. Esmay<br>
+                        <em>Holocene</em>. (2023)<br>
+                            <a href="https://doi.org/10.1177/09596836231176502">DOI:10.1177/09596836231176502</a>
+                        </li>
+                      <li>
+                            <strong>A fuzzy logic methodology for assessing the resilience of past communities to tephra fall: a Laacher See eruption 13,000 year BP case</strong><br>
+                            R. Blong, F. Riede, <u>Q. Chen</u><br>
+                            <em>Volcanica</em>. (2018)<br>
+                            <a href="https://doi.org/10.30909/vol.01.01.6384">DOI:10.30909/vol.01.01.6384</a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="activities">
+                    <h2>Activities</h2>
+                    <ul>
+                      <li><strong>Eleventh International Conference on
+Guided Self-Organization: Machine Learning in Embodied Agents</strong>. Tübingen, Germany. February 2025. (Upcoming)</li>
+                      <li><strong>Workshop on Critical Phenomena and Topological Data Analysis</strong>. Newcastle, Australia. November 2024.</li>
+                      <li><strong>Research Seminar Data Science Foundations</strong>. Institute for Data Science Foundations, Hamburg University of Technology (via Zoom). October 2024.</li>
+                      <li><strong>Emerging Aspirations in Complex Systems Workshop</strong> (best presentation award). Sydney, Australia. August 2024.</li>
+                    </ul>
+                </section>
+                <section class="interests">
+                    <h2>Other Interests</h2>
+                    <p>In my free time, I enjoy hiking, playing table tennis and strumming ukulele!</p>
+                </section>
+                <section class="pets">
+                    <h2>Meet My Friends</h2>
+                    <div class="pet-gallery">
+                        <div class="pet">
+                            <img src="https://qianyangchen.github.io/boltz.png" alt="Budgie">
+                            <p>Budgie - Boltz</p>
+                        </div>
+                        <div class="pet">
+                            <img src="https://qianyangchen.github.io/elsa.png" alt="Budgie">
+                            <p>Budgie - Elsa</p>
+                        </div>
+                        <div class="pet">
+                            <img src="https://qianyangchen.github.io/gyoza.png" alt="Budgie">
+                            <p>Budgie - Gyoza</p>
+                        </div>
+                        <div class="pet">
+                            <img src="https://qianyangchen.github.io/udon.png" alt="Budgie">
+                            <p>Budgie - Udon</p>
+                        </div>
+                        <div class="pet">
+                            <img src="https://qianyangchen.github.io/oolong.png" alt="Budgie">
+                            <p>Budgie - Oolong</p>
+                        </div>
+                        <div class="pet">
+                            <img src="https://qianyangchen.github.io/sai.png" alt="Budgie">
+                            <p>Budgie - Sai</p>
+                        </div>
+                        <div class="pet">
+                            <img src="https://qianyangchen.github.io/dodo.png" alt="Cockatiel">
+                            <p>Cockatiel - Dodo</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
         <footer>
-            <p>Contact: [your.email@sydney.edu.au] | LinkedIn | GitHub</p>
+            <p>Contact: qianyang.chen@sydney.edu.au | <a href="https://www.linkedin.com/in/qianyang-chen" target="_blank">LinkedIn</a>
+</p>
         </footer>
     </div>
 </body>
