@@ -79,18 +79,29 @@
             border-radius: 50%;  /* Make images round */
             object-fit: cover;
         }
-      .contact-info img {
-    background-color: transparent;
-}
       ul {
         list-style-type: disc;
         margin-top: 0;
         margin-bottom: 20px;
-    }
+        }
       ul li {
         margin-bottom: 15px;  /* Adjust spacing between list items */
+        }
+    .contact-info {
+    list-style: none;  /* Removes the bullets */
+    padding: 0;  /* Remove padding on the left */
     }
 
+    .contact-info li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;  /* Space between list items */
+    }
+
+    .contact-info img {
+        margin-right: 10px;  /* Space between icon and text */
+        background-color: transparent;
+    }
     </style>
 </head>
 <body>
