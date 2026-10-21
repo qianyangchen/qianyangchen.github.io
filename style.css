@@ -1,0 +1,336 @@
+:root {
+    --bg-color: #fafaf9; /* Warm off-white neutral */
+    --card-bg: #ffffff;
+    --text-primary: #283618; /*#1c1917;*/ /* Soft black */
+    --text-secondary: #57534e; /* Slate gray */
+    --accent: #283618; /* Deep olive green */
+    --accent-hover: #bc6c25; /* Terracotta highlight */
+    --border-color: #e7e5e4;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- Navigation & Header --- 
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}*/
+
+.site-header {
+    background-color: #f4f5f0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03); 
+}
+
+/* This is the critical part that puts title on left and tabs on right */
+.header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 25px 20px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-end; 
+}
+
+/* This ensures the tabs themselves sit side-by-side */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+/* If you choose Option 3 (Deep Olive), you will also need to add these rules 
+   to make the text white: */
+/*
+.site-header .header-title h1, 
+.site-header .cn-name, 
+.site-header .pronunciation, 
+.site-header .nav-links a {
+    color: #ffffff;
+}
+.site-header .nav-links a:hover, 
+.site-header .nav-links a.active {
+    color: #e8f3ec; 
+}
+*/
+
+.header-title h1 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin: 0 0 5px 0;
+}
+
+.header-title .cn-name {
+    font-weight: normal;
+    color: var(--text-secondary);
+}
+
+.header-title .pronunciation {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent);
+}
+
+/* --- Layouts --- */
+.two-column {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.left-sidebar {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.right-content {
+    width: 75%;
+}
+
+/* --- Sidebar Elements --- */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.contact-info li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-info a:hover {
+    color: var(--accent);
+}
+
+/* --- Typography & Sections --- */
+h2 {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* --- Pets Gallery --- */
+.pet-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.pet img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+.pet p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+/* --- Publication Cards --- */
+.pub-card {
+    display: flex;
+    gap: 25px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pub-thumb {
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.pub-details {
+    flex-grow: 1;
+}
+
+.pub-title {
+    margin: 0 0 5px 0;
+    font-size: 1.15rem;
+}
+
+.pub-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.pub-title a:hover {
+    color: var(--accent-hover);
+}
+
+.pub-authors {
+    margin: 0 0 3px 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.pub-venue {
+    margin: 0 0 12px 0;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+/* --- Expandable Typographic Links --- */
+.pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0 15px; /* 0 vertical gap, 15px horizontal gap */
+    font-size: 0.85rem;
+    font-family: var(--font-sans);
+}
+
+/* Make the summary and content act as direct children of the flex container */
+.pub-links details {
+    display: contents; 
+}
+
+.pub-links summary {
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-weight: 500;
+    list-style: none; 
+    user-select: none;
+    transition: color 0.2s;
+}
+
+.pub-links summary::-webkit-details-marker {
+    display: none; /* Hides default arrow */
+}
+
+.pub-links summary:hover {
+    color: var(--accent-hover);
+}
+
+/* Plus/Minus toggles */
+.pub-links details[open] summary::before { content: "– "; }
+.pub-links details:not([open]) summary::before { content: "+ "; }
+
+.pub-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.pub-links a:hover {
+    color: var(--accent-hover);
+}
+
+.link-sep {
+    color: var(--border-color);
+}
+
+/* The expanded content box */
+.expanded-text {
+    width: 100%; /* Forces the expanded box to take full width */
+    order: 10; /* Pushes the expanded box below all the top-row links */
+    margin-top: 15px;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border-left: 3px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Specific styling for the BibTeX code block */
+.bibtex-code {
+    font-family: monospace;
+    white-space: pre-wrap;
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
