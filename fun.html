@@ -1,0 +1,81 @@
+---
+# This empty front matter tells Jekyll to process this page
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun - Qianyang Chen</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lightweight library to render Markdown files into HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Unified Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <!-- Left Side: Title -->
+            <div class="header-title">
+                <h1 style="margin:0;">Qianyang Chen <span class="cn-name">(陳倩楊)</span></h1>
+                <span class="pronunciation">Pronunciation: Chien-yahng Chen</span>
+            </div>
+            <!-- Right Side: Tabs -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="fun.html">Fun</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <!-- Top Section: The Flock -->
+            <section class="pets" style="margin-bottom: 50px;">
+                <h2>The Flock</h2>
+                <p style="margin-top: -10px; margin-bottom: 20px; font-size: 0.95rem; color: var(--text-secondary);">In my free time, I enjoy hiking, playing table tennis, strumming ukulele, and spending time with my flock!</p>
+                <div class="pet-gallery">
+                    <div class="pet"><img src="figures/boltz.png" alt="Boltz"><p>Boltz</p></div>
+                    <div class="pet"><img src="figures/elsa.png" alt="Elsa"><p>Elsa</p></div>
+                    <div class="pet"><img src="figures/gyoza.png" alt="Gyoza"><p>Gyoza</p></div>
+                    <div class="pet"><img src="figures/udon.png" alt="Udon"><p>Udon</p></div>
+                    <div class="pet"><img src="figures/oolong.png" alt="Oolong"><p>Oolong</p></div>
+                    <div class="pet"><img src="figures/sai.png" alt="Sai"><p>Sai</p></div>
+                    <div class="pet"><img src="figures/dodo.png" alt="Dodo"><p>Dodo</p></div>
+                </div>
+            </section>
+
+            <!-- Bottom Section: The Feed (Masonry Grid) -->
+            <section>
+                <h2>The Feed</h2>
+                <div class="feed-grid">
+                    
+                    <!-- Jekyll Loop: Creates a card for every post -->
+                    {% for post in site.posts %}
+                    <article class="feed-card">
+                        <a href="{{ post.url | relative_url }}" class="card-link">
+                            {% if post.image %}
+                            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="card-thumb">
+                            {% endif %}
+                            <div class="card-text">
+                                <h3>{{ post.title }}</h3>
+                                <p>{{ post.excerpt }}</p>
+                            </div>
+                        </a>
+                    </article>
+                    {% endfor %}
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Minimalist Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>Last updated: October 2026</p>
+        </div>
+    </footer>
+</body>
+</html>

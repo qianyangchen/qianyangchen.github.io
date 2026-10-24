@@ -25,16 +25,7 @@ body {
     padding: 40px 20px;
 }
 
-/* --- Navigation & Header --- 
-.top-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-}*/
-
+/* --- Navigation & Header --- */
 .site-header {
     background-color: #f4f5f0;
     width: 100%;
@@ -59,21 +50,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-/* If you choose Option 3 (Deep Olive), you will also need to add these rules 
-   to make the text white: */
-/*
-.site-header .header-title h1, 
-.site-header .cn-name, 
-.site-header .pronunciation, 
-.site-header .nav-links a {
-    color: #ffffff;
-}
-.site-header .nav-links a:hover, 
-.site-header .nav-links a.active {
-    color: #e8f3ec; 
-}
-*/
 
 .header-title h1 {
     font-family: var(--font-serif);
@@ -333,4 +309,109 @@ li {
     margin: 0;
     font-size: 0.85rem;
     color: var(--text-primary);
+}
+
+/* --- Masonry Feed Grid --- */
+.feed-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+
+.feed-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* --- Two-Column Feed Grid --- */
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+    gap: 20px; /* Controls both the horizontal and vertical space between cards */
+    margin-top: 20px;
+}
+
+/* Stacks the cards to 1 column on smaller laptop screens or mobile devices */
+@media (max-width: 768px) {
+    .feed-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Turns the link into a horizontal flex container */
+.card-link {
+    display: flex;
+    align-items: center; /* Vertically centers the text next to the image */
+    padding: 15px;
+    text-decoration: none;
+    gap: 15px; /* Space between the thumbnail and the text */
+}
+
+/* Forces the image into a small square */
+.card-thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px; /* Softly rounds the thumbnail's corners */
+    object-fit: cover;
+    flex-shrink: 0; /* Prevents the image from being squished */
+    background-color: #eee; /* Placeholder color if image takes a second to load */
+}
+
+/* Allows the text to take up the remaining width */
+.card-text {
+    flex-grow: 1;
+}
+
+.card-text h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.card-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* --- Blog Post Formatting --- */
+.post-container {
+    max-width: 800px; /* Keeps line lengths comfortable for reading */
+    margin: 0 auto; 
+    padding-top: 20px;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.post-content {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* Styles the Markdown headings (## and ###) */
+.post-content h2, .post-content h3 {
+    color: var(--text-primary);
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.post-content ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.post-content li {
+    margin-bottom: 10px;
 }
